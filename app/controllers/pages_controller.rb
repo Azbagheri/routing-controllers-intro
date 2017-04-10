@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   before_action :set_kitten_url, only: [:kitten, :kittens]
 
 def welcome
- @header = "This is the welcome page"
+ # @header = "This is the welcome page"
 end
 
 def about
@@ -11,6 +11,8 @@ end
 
 def contest
   @header = "This is the contest page"
+  flash[:notice] = "Sorry, the contest has ended"
+  redirect_to "/welcome"
 end
 
 def kitten
