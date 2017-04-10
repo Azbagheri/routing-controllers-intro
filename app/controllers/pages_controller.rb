@@ -12,7 +12,7 @@ end
 def contest
   @header = "This is the contest page"
   flash[:notice] = "Sorry, the contest has ended"
-  redirect_to "/welcome"
+  redirect_to welcome_url
 end
 
 def kitten
@@ -33,7 +33,8 @@ def secrets
     render 'secrets'
   else
     flash[:alert] = "Sorry, you're not authorized to see that page!"
-    redirect_to "/welcome"
+    # redirect_to "/welcome"
+    redirect_to kitten_url(300)
   end
 end
 
