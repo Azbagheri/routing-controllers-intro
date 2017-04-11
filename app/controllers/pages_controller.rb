@@ -34,7 +34,7 @@ def secrets
   else
     flash[:alert] = "Sorry, you're not authorized to see that page!"
     # redirect_to "/welcome"
-    redirect_to kitten_url(300)
+    redirect_to kitten_url(500)
   end
 end
 
